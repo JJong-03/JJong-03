@@ -77,10 +77,8 @@ The current repository is a cleaned and documented public version prepared for p
 ## 📫 Contact
 
 <p>
-  <a href="mailto:본인의이메일@gmail.com">
+  <a href="mailto:jowon7602@gmail.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white"/>
   </a>
-  <a href="링크드인_링크">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white"/>
-  </a>
+
 </p>
