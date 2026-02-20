@@ -1,4 +1,4 @@
-# GDH | Building Cloud-Native Systems
+# KJW | Building Cloud-Native Systems
 
 Designing and implementing scalable systems on Kubernetes.  
 From application logic to GitOps-driven delivery.
