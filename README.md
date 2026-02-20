@@ -1,66 +1,66 @@
-<br/>
+# KJW | Building Cloud-Native Systems
 
-## 🛠 Tech Stack
+Designing and implementing scalable systems on Kubernetes.  
+From application logic to GitOps-driven delivery.
 
-### 🐍 Languages & Core
+---
+
+## ⚡ Core Focus
+
+- Kubernetes Job-based distributed workloads
+- Stateless backend architecture
+- GitOps (Argo CD) & CI automation
+- Reproducible & observable infrastructure
+
+---
+
+## 🧰 Tech Stack
+
 <p>
-  <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white">
-  <img src="https://img.shields.io/badge/Python_3.11-3776AB?style=for-the-badge&logo=python&logoColor=white">
-  <img src="https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white">
+  <img src="https://img.shields.io/badge/C-00599C?style=flat&logo=c&logoColor=white">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white">
+  <img src="https://img.shields.io/badge/Flask-000000?style=flat&logo=flask&logoColor=white">
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white">
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white">
+  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white">
+  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=github-actions&logoColor=white">
+  <img src="https://img.shields.io/badge/Argo_CD-EF7B4D?style=flat&logo=argo&logoColor=white">
 </p>
 
+---
 
+## 📌 Highlight Project
 
-### 🌐 Backend & Web
-<p>
-  <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white">
-  <img src="https://img.shields.io/badge/Bootstrap_5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white">
-  <img src="https://img.shields.io/badge/Jinja2-B41717?style=for-the-badge&logo=jinja&logoColor=white">
-</p>
+### 🚀 Kubernetes 기반 Stock Backtesting Platform
 
+검증된 레거시 Python 백테스트 엔진을 **수정 없이 컨테이너화**하고,  
+각 실행을 **Kubernetes Job으로 분리**하여 병렬 처리 및 수평 확장을 구현한 클라우드 네이티브 시스템입니다.
 
+애플리케이션 개발에 그치지 않고,  
+**아키텍처 설계 → 컨테이너화 → CI/CD 자동화 → GitOps 배포**까지  
+전체 생명주기를 직접 설계하고 구현했습니다.
 
-### 🗄️ Database
-<p>
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
-  <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white">
-</p>
+- Web ↔ K8s Job 동적 오케스트레이션 구조
+- Stateless 설계 (로컬 파일 I/O 제거)
+- MySQL 기반 단일 진실 공급원(Source of Truth)
+- GitHub Actions → GHCR → Argo CD GitOps 배포 파이프라인 구축
+- run_id 기반 추적 가능한 로깅 및 관측성 확보
 
-
-
-### ☁️ Infrastructure & Cloud-Native
-<p>
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white">
-  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white">
-</p>
-
-
-### 🔄 DevOps & CI/CD (GitOps)
-<p>
-  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white">
-  <img src="https://img.shields.io/badge/Argo_CD-EF7B4D?style=for-the-badge&logo=argo&logoColor=white">
-</p>
-
-
-### 📊 Data & Testing
-<p>
-  <img src="https://img.shields.io/badge/Pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white">
-  <img src="https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white">
-</p>
-
-<br/>
+---
 
 ## 📊 GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=JJong-03&show_icons=true&theme=transparent&hide_border=true&title_color=326CE5&icon_color=326CE5&text_color=aaaaaa" height="150" alt="GitHub Stats"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JJong-03&layout=compact&theme=transparent&hide_border=true&title_color=326CE5&text_color=aaaaaa" height="150" alt="Top Languages"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=JJong-03&show_icons=true&theme=transparent&hide_border=true&title_color=326CE5&icon_color=326CE5&text_color=888888" height="150" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JJong-03&layout=compact&theme=transparent&hide_border=true&title_color=326CE5&text_color=888888" height="150" />
 </div>
 
-<br/>
+---
 
-## 📫 Contact Me
+## 📫 Contact
 
 <p>
-  <a href="mailto:jowon7602@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
+  <a href="mailto:jowon7602@gmail.com">
+    <img src="https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white"/>
+  </a>
 </p>
