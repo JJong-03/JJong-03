@@ -1,5 +1,3 @@
-## Hi there 👋
-
 <br/>
 
 ## 🛠 Tech Stack
@@ -55,8 +53,8 @@
 ## 📊 GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=202201652@inu.ac.kr&show_icons=true&theme=transparent&hide_border=true&title_color=326CE5&icon_color=326CE5&text_color=aaaaaa" height="150" alt="GitHub Stats"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=202201652@inu.ac.kr&layout=compact&theme=transparent&hide_border=true&title_color=326CE5&text_color=aaaaaa" height="150" alt="Top Languages"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=JJong-03&show_icons=true&theme=transparent&hide_border=true&title_color=326CE5&icon_color=326CE5&text_color=aaaaaa" height="150" alt="GitHub Stats"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JJong-03&layout=compact&theme=transparent&hide_border=true&title_color=326CE5&text_color=aaaaaa" height="150" alt="Top Languages"/>
 </div>
 
 <br/>
