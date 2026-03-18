@@ -44,7 +44,7 @@ From application logic to GitOps-driven delivery.
 ### 🚀 Kubernetes 기반 Stock Backtesting Platform
 
 🔗 Repository:  
-👉 https://github.com/JJong-03/stock-backtest-platform
+👉 [https://github.com/JJong-03/stock-backtest-platform](https://github.com/msp-architect-2026/kim-jongwon)
 
 검증된 레거시 Python 백테스트 엔진을 **수정 없이 컨테이너화**하고,  
 각 실행을 **Kubernetes Job으로 분리**하여 병렬 처리 및 수평 확장을 구현한 클라우드 네이티브 시스템입니다.
