@@ -1,23 +1,23 @@
 # KJW | Building Cloud-Native Systems
 
-Designing and implementing scalable systems on Kubernetes.  
-From application logic to GitOps-driven delivery.
+Designing and implementing cloud-native platforms across application, Kubernetes, and infrastructure layers.  
+From distributed workloads and GitOps delivery to reproducible AWS infrastructure with Terraform.
 
 ---
 
-## ⚡ Core Focus
+## Core Focus
 
 - Kubernetes Job-based distributed workloads
 - Stateless backend architecture
-- GitOps (Argo CD) & CI automation
-- Reproducible & observable infrastructure
+- GitOps (Argo CD) and CI/CD automation
+- AWS and Terraform-based infrastructure design
+- Reproducible and observable systems
 
 ---
 
+## Tech Stack
 
-## 🧰 Tech Stack
-
-### 🚀 Core
+### Core
 
 <p>
   <img src="https://img.shields.io/badge/Python-151515?style=for-the-badge&logo=python&logoColor=3776AB" alt="Python">
@@ -25,11 +25,13 @@ From application logic to GitOps-driven delivery.
   <img src="https://img.shields.io/badge/MySQL-151515?style=for-the-badge&logo=mysql&logoColor=4479A1" alt="MySQL">
   <img src="https://img.shields.io/badge/Docker-151515?style=for-the-badge&logo=docker&logoColor=2496ED" alt="Docker">
   <img src="https://img.shields.io/badge/Kubernetes-151515?style=for-the-badge&logo=kubernetes&logoColor=326CE5" alt="Kubernetes">
+  <img src="https://img.shields.io/badge/Terraform-151515?style=for-the-badge&logo=terraform&logoColor=7B42BC" alt="Terraform">
+  <img src="https://img.shields.io/badge/AWS-151515?style=for-the-badge&logo=amazonwebservices&logoColor=FF9900" alt="AWS">
   <img src="https://img.shields.io/badge/GitHub_Actions-151515?style=for-the-badge&logo=github-actions&logoColor=2088FF" alt="GitHub Actions">
   <img src="https://img.shields.io/badge/Argo_CD-151515?style=for-the-badge&logo=argo&logoColor=EF7B4D" alt="Argo CD">
 </p>
 
-### 🧱 Foundation
+### Foundation
 
 <p>
   <img src="https://img.shields.io/badge/Linux-151515?style=for-the-badge&logo=linux&logoColor=FCC624" alt="Linux">
@@ -39,34 +41,44 @@ From application logic to GitOps-driven delivery.
 
 ---
 
-## 📌 Highlight Project
+## Featured Projects
 
-### 🚀 Kubernetes 기반 Stock Backtesting Platform
+### 1. Kubernetes-based Stock Backtesting Platform
 
-🔗 Repository:  
-👉 [https://github.com/JJong-03/stock-backtest-platform](https://github.com/msp-architect-2026/kim-jongwon)
+Repository:  
+[stock-backtest-platform](https://github.com/JJong-03/stock-backtest-platform)
 
-검증된 레거시 Python 백테스트 엔진을 **수정 없이 컨테이너화**하고,  
-각 실행을 **Kubernetes Job으로 분리**하여 병렬 처리 및 수평 확장을 구현한 클라우드 네이티브 시스템입니다.
+A cloud-native platform that containerizes a legacy Python backtesting engine without modifying its core logic, and executes each run as an isolated Kubernetes Job for parallel processing and horizontal scalability.
 
-애플리케이션 개발에 그치지 않고,  
-**아키텍처 설계 → 컨테이너화 → CI/CD 자동화 → GitOps 배포**까지  
-전체 생명주기를 직접 설계하고 구현했습니다.
+I designed and implemented the full lifecycle of the system, from architecture and containerization to CI/CD automation and GitOps deployment.
 
-- Web ↔ K8s Job 동적 오케스트레이션 구조
-- Stateless 설계 (로컬 파일 I/O 제거)
-- MySQL 기반 단일 진실 공급원(Source of Truth)
-- GitHub Actions → GHCR → Argo CD GitOps 배포 파이프라인 구축
-- run_id 기반 추적 가능한 로깅 및 관측성 확보
+- Dynamic web-to-Kubernetes Job orchestration
+- Stateless architecture by removing local file dependencies
+- MySQL-based source of truth
+- GitHub Actions to GHCR to Argo CD delivery pipeline
+- Traceable execution flow with run_id-based logging
 
-#### 📋 Project Background
+Background:  
+This project was originally developed inside a private organization repository. The current repository is a cleaned and documented public version prepared for portfolio presentation.
 
-This project was originally developed within a private organization repository.  
-The current repository is a cleaned and documented public version prepared for portfolio presentation.
+### 2. AWS Multi-VPC 3-Tier Infrastructure with Terraform
+
+Repository:  
+[aws-terraform-multi-vpc](https://github.com/JJong-03/aws-terraform-multi-vpc)
+
+A Terraform-based AWS infrastructure project that provisions a production-like multi-VPC environment with separated application, management, and service networks.
+
+The architecture routes static traffic through CloudFront and S3, dynamic traffic through WAF, ALB, EC2 Nginx, EKS, and Aurora, and isolates admin access through an OpenVPN-based management VPC.
+
+- Multi-VPC network segmentation with VPC peering
+- CloudFront and S3 static delivery with WAF-protected dynamic traffic
+- ALB to EC2 Nginx to EKS reverse proxy architecture
+- Aurora MySQL, ECS Fargate, ECR, Route53, and ACM integration
+- Modular Terraform structure with architecture and operations documentation
 
 ---
 
-## 📊 GitHub Stats
+## GitHub Stats
 
 <div align="center">
 <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=JJong-03&show_icons=true&theme=transparent&hide_border=true&title_color=326CE5&icon_color=326CE5&text_color=888888&v=1" height="150" alt="GitHub Stats" />
@@ -75,11 +87,10 @@ The current repository is a cleaned and documented public version prepared for p
 
 ---
 
-## 📫 Contact
+## Contact
 
 <p>
   <a href="mailto:jowon7602@gmail.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white"/>
   </a>
-
 </p>
