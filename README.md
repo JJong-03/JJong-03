@@ -23,12 +23,13 @@ From distributed workloads and GitOps delivery to reproducible AWS infrastructur
   <img src="https://img.shields.io/badge/Python-151515?style=for-the-badge&logo=python&logoColor=3776AB" alt="Python">
   <img src="https://img.shields.io/badge/Flask-151515?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
   <img src="https://img.shields.io/badge/MySQL-151515?style=for-the-badge&logo=mysql&logoColor=4479A1" alt="MySQL">
+  <br/>
   <img src="https://img.shields.io/badge/Docker-151515?style=for-the-badge&logo=docker&logoColor=2496ED" alt="Docker">
   <img src="https://img.shields.io/badge/Kubernetes-151515?style=for-the-badge&logo=kubernetes&logoColor=326CE5" alt="Kubernetes">
-  <img src="https://img.shields.io/badge/Terraform-151515?style=for-the-badge&logo=terraform&logoColor=7B42BC" alt="Terraform">
-  <img src="https://img.shields.io/badge/AWS-151515?style=for-the-badge&logo=amazonwebservices&logoColor=FF9900" alt="AWS">
   <img src="https://img.shields.io/badge/GitHub_Actions-151515?style=for-the-badge&logo=github-actions&logoColor=2088FF" alt="GitHub Actions">
-  <img src="https://img.shields.io/badge/Argo_CD-151515?style=for-the-badge&logo=argo&logoColor=EF7B4D" alt="Argo CD">
+  <br/>
+  <img src="https://img.shields.io/badge/Amazon%20AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white&v=2" alt="AWS">
+  <img src="https://img.shields.io/badge/Terraform-151515?style=for-the-badge&logo=terraform&logoColor=7B42BC" alt="Terraform">
 </p>
 
 ### Foundation
@@ -45,36 +46,26 @@ From distributed workloads and GitOps delivery to reproducible AWS infrastructur
 
 ### 1. Kubernetes-based Stock Backtesting Platform
 
-Repository:  
-[stock-backtest-platform](https://github.com/JJong-03/stock-backtest-platform)
+Repository: [Stock Backtesting Platform](https://github.com/msp-architect-2026/kim-jongwon)
 
-A cloud-native platform that containerizes a legacy Python backtesting engine without modifying its core logic, and executes each run as an isolated Kubernetes Job for parallel processing and horizontal scalability.
+A cloud-native platform that runs legacy Python backtesting workloads as isolated Kubernetes Jobs for scalable and reproducible execution.
 
-I designed and implemented the full lifecycle of the system, from architecture and containerization to CI/CD automation and GitOps deployment.
-
-- Dynamic web-to-Kubernetes Job orchestration
-- Stateless architecture by removing local file dependencies
-- MySQL-based source of truth
-- GitHub Actions to GHCR to Argo CD delivery pipeline
-- Traceable execution flow with run_id-based logging
+- Containerized a legacy backtesting engine without changing core logic
+- Built web-to-Kubernetes Job orchestration for parallel execution
+- Automated delivery with GitHub Actions, GHCR, and Argo CD
 
 Background:  
-This project was originally developed inside a private organization repository. The current repository is a cleaned and documented public version prepared for portfolio presentation.
+Originally developed in a private organization repository and later cleaned up for public portfolio use.
 
 ### 2. AWS Multi-VPC 3-Tier Infrastructure with Terraform
 
-Repository:  
-[aws-terraform-multi-vpc](https://github.com/JJong-03/aws-terraform-multi-vpc)
+Repository: [aws-terraform-multi-vpc](https://github.com/JJong-03/aws-terraform-multi-vpc)
 
-A Terraform-based AWS infrastructure project that provisions a production-like multi-VPC environment with separated application, management, and service networks.
+A Terraform project that provisions a production-like AWS environment across multiple VPCs for application, management, and service workloads.
 
-The architecture routes static traffic through CloudFront and S3, dynamic traffic through WAF, ALB, EC2 Nginx, EKS, and Aurora, and isolates admin access through an OpenVPN-based management VPC.
-
-- Multi-VPC network segmentation with VPC peering
-- CloudFront and S3 static delivery with WAF-protected dynamic traffic
-- ALB to EC2 Nginx to EKS reverse proxy architecture
-- Aurora MySQL, ECS Fargate, ECR, Route53, and ACM integration
-- Modular Terraform structure with architecture and operations documentation
+- Built a multi-VPC architecture with CloudFront, WAF, ALB, EKS, and Aurora
+- Separated admin access through an OpenVPN-based management VPC
+- Organized the infrastructure into reusable Terraform modules with deployment docs
 
 ---
 
