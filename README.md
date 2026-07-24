@@ -58,8 +58,8 @@ Personal implementation: [aegis-pi/dashboard_vpc](https://github.com/aegis-pi/da
 여러 공장의 센서·AI·인프라 상태를 **Safety Score**로 표준화하고 중앙 dashboard · daily report · Slack alert로 연결한 팀 프로젝트입니다.  
 **MSP 최종 프로젝트 발표 최우수팀 수상 (팀 수상, 2026.06)**
 
-- data/dashboard plane 설계·구현 — 개인 구현 저장소 `dashboard_vpc` 기준 (Terraform infra, FastAPI dashboard backend, React dashboard)
-- telemetry를 Safety Score로 표준화하는 파이프라인(risk-normalizer, risk-score-engine, data-processor)과 Slack alert notifier 구현
+- Data/Dashboard VPC Terraform, DynamoDB Streams→Redis notifier, FastAPI backend, React dashboard를 개인 구현
+- DataProcessor·GraphAggregator5m·RiskAlertDispatcher(Slack)는 팀 통합 범위로 구분하고 S3·DynamoDB·IoT 계약을 맞춤
 - deployment/control path와 user/read path를 VPC 경계로 분리하고, dashboard 조회는 DynamoDB read model로 사전 집계된 상태만 읽도록 설계
 
 ### 2. LawMainRoad (법대로) — Labor-Law RAG & Document Workflow
