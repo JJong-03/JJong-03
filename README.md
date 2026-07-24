@@ -64,7 +64,9 @@ Personal implementation: [aegis-pi/dashboard_vpc](https://github.com/aegis-pi/da
 
 ### 2. LawMainRoad (법대로) — Labor-Law RAG & Document Workflow
 
-Repository: [law_main_road_main](https://github.com/2026-moel-datacontest-core/law_main_road_main) · [after_step (RAG 개선)](https://github.com/2026-moel-datacontest-core/after_step) · [Demo](https://www.law-main-road.cloud) · [Detail](https://kjw-cloud-portfolio.vercel.app/projects/law-main-road)
+Repository: [law_main_road_main](https://github.com/2026-moel-datacontest-core/law_main_road_main) · [after_step (RAG 개선)](https://github.com/2026-moel-datacontest-core/after_step) · [시연 영상](https://youtu.be/fFEPP3KtHMs) · [Detail](https://kjw-cloud-portfolio.vercel.app/projects/law-main-road)
+
+> 프로젝트 종료 후 시연용 클라우드 리소스는 정리했습니다. 동작 흐름은 위 시연 영상에서 확인할 수 있습니다.
 
 외국인 근로자 등 취약 노동자가 노동 문제를 **한국 노동법 근거와 함께** 정리하도록 돕는 AI 지원 MVP 팀 프로젝트입니다.
 
