@@ -1,147 +1,32 @@
-# KJW | Cloud-Native Platforms & Infrastructure
+# 김종원 | 클라우드 인프라 / DevOps 신입
 
-애플리케이션, Kubernetes, 인프라 계층을 함께 고려하며  
-**실행 격리, 재현성, GitOps, IaC** 중심으로 클라우드 네이티브 시스템을 설계하고 구현합니다.
+Terraform으로 AWS와 GCP 인프라를 만들고 Kubernetes로 서비스를 배포했습니다.
+요청이 실패하면 막힌 구간을 찾아 고치고, 고친 뒤 무엇을 확인했는지 기록합니다.
 
-**Portfolio Website:** [kjw-cloud-portfolio.vercel.app](https://kjw-cloud-portfolio.vercel.app)
+[웹 포트폴리오](https://kjw-cloud-portfolio.vercel.app) | [이력서](https://kjw-cloud-portfolio.vercel.app/resume) | jowon7602@gmail.com
 
----
+## 대표 프로젝트
 
-## Core Focus
+| 프로젝트 | 맡은 일 | 해결한 문제와 확인 |
+|---|---|---|
+| [Aegis-Pi Risk Twin](https://github.com/aegis-pi/dashboard_vpc)<br>2인 팀, MSP 최종 프로젝트 최우수팀(팀) | 데이터/대시보드 VPC Terraform, FastAPI 백엔드, React 관제 화면, DynamoDB Streams와 Redis 실시간 알림, Bedrock AI 채팅 | 이력 조회 504를 막은 임시 조치가 지나간 위험 신호를 지운 것을 찾아, 팀원과 기간별 조회로 나눠 해결. 이력 조회 테스트 38개 재실행 통과(응답 시간은 재지 않음) |
+| [Kubernetes 백테스트 플랫폼](https://github.com/JJong-03/stock-backtest-platform)<br>개인, MSP 개인 프로젝트 우수상 | 요청마다 Kubernetes Job 실행, run_id 추적, GitHub Actions와 Argo CD, Prometheus와 Grafana | 로컬 kind 1노드 부하 측정으로 병목(결과 조회)을 찾고, 웹 워커 2개, CPU 1코어, 메모리 1Gi 구성에서 처리량이 분당 27.7건에서 43.7건으로 늘어남(+58%, 구성별 1회 측정) |
+| [AWS Multi-VPC 인프라](https://github.com/JJong-03/aws-terraform-multi-vpc)<br>개인 PoC | VPC 3개로 사용자, 관리자, 서비스 경로 분리. CloudFront, WAF, ALB, EKS, Aurora, OpenVPN | EC2 Nginx에서 EKS로 가는 504를 보안 그룹과 호출 주소, 두 원인으로 나눠 복구. 배포 뒤 8단계 점검 |
+| [GCP GKE GitOps](https://github.com/JJong-03/gcp-gke-gitops-pipeline)<br>개인 실습 | Terraform, GitHub Actions와 WIF(키 파일 없음), Artifact Registry, Argo CD | 노드 2대에서 멈춘 롤아웃을 교체 순서(maxSurge 0)로 끝내고 Pod 2/2, HTTP 200 확인 |
+| [LawMainRoad](https://github.com/2026-moel-datacontest-core/law_main_road_main)<br>2인 팀 | 노동 분쟁 사후 대응(After) 기능, GCP 이전(Cloud Run, Cloud SQL, WIF 배포와 롤백) | 법령 1,722개 조각에서 근거와 함께 답하는 흐름. 60문항 자체 평가 충족 44, 부분 충족 16, 실패 0(2026-04-20) |
+| [Terraform 모듈 리팩터링](https://github.com/JJong-03/aws-terraform-deepdive)<br>교육 미션 선택 심화 | 네트워크, 비밀값, 메시징, 캐시 4개 모듈과 dev/prod 환경 분리 | 모듈 출력값을 바로 넘겨 상태 파일 참조를 없애고, 환경별 plan으로 확인(prod는 비용 때문에 적용하지 않음) |
 
-- Kubernetes Job 기반 분산 실행 구조
-- Stateless backend 및 batch workload 아키텍처
-- GitOps (Argo CD) 와 CI/CD 자동화
-- AWS / GCP 기반 인프라 설계와 Terraform IaC
-- IoT telemetry 수집 → read model 집계 → dashboard 조회 경로 설계
-- Reproducible and observable systems
+시연용 클라우드 자원은 확인 뒤 정리했습니다. 실행 화면과 검증 기록은 각 저장소와 웹 포트폴리오에 있습니다.
 
----
+## 프로젝트에서 직접 쓴 기술
 
-## Tech Stack
+- 클라우드: AWS (VPC, EKS, ECS Fargate, ALB, CloudFront, DynamoDB, Lambda, Cognito, Bedrock), GCP (GKE, Cloud Run, Cloud SQL)
+- IaC와 배포: Terraform (모듈, dev/prod 분리), GitHub Actions, Argo CD, WIF
+- 실행과 관측: Linux, Docker, Kubernetes, Prometheus, Grafana
+- 개발: Python (FastAPI, Flask), React, MySQL, Redis
 
-### Core
+## 그 밖의 경험
 
-<p>
-  <img src="https://img.shields.io/badge/Python-151515?style=for-the-badge&logo=python&logoColor=3776AB" alt="Python">
-  <img src="https://img.shields.io/badge/FastAPI-151515?style=for-the-badge&logo=fastapi&logoColor=009688" alt="FastAPI">
-  <img src="https://img.shields.io/badge/Flask-151515?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
-  <img src="https://img.shields.io/badge/MySQL-151515?style=for-the-badge&logo=mysql&logoColor=4479A1" alt="MySQL">
-  <img src="https://img.shields.io/badge/PostgreSQL-151515?style=for-the-badge&logo=postgresql&logoColor=4169E1" alt="PostgreSQL">
-  <br/>
-  <img src="https://img.shields.io/badge/Docker-151515?style=for-the-badge&logo=docker&logoColor=2496ED" alt="Docker">
-  <img src="https://img.shields.io/badge/Kubernetes-151515?style=for-the-badge&logo=kubernetes&logoColor=326CE5" alt="Kubernetes">
-  <img src="https://img.shields.io/badge/GitHub_Actions-151515?style=for-the-badge&logo=github-actions&logoColor=2088FF" alt="GitHub Actions">
-  <img src="https://img.shields.io/badge/Argo_CD-151515?style=for-the-badge&logo=argo&logoColor=EF7B4D" alt="Argo CD">
-  <br/>
-  <img src="https://img.shields.io/badge/Amazon%20AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white&v=2" alt="AWS">
-  <img src="https://img.shields.io/badge/GCP-151515?style=for-the-badge&logo=googlecloud&logoColor=4285F4" alt="GCP">
-  <img src="https://img.shields.io/badge/Terraform-151515?style=for-the-badge&logo=terraform&logoColor=7B42BC" alt="Terraform">
-</p>
-
-### Foundation
-
-<p>
-  <img src="https://img.shields.io/badge/Linux-151515?style=for-the-badge&logo=linux&logoColor=FCC624" alt="Linux">
-  <img src="https://img.shields.io/badge/Networking-151515?style=for-the-badge" alt="Networking">
-  <img src="https://img.shields.io/badge/C-151515?style=for-the-badge&logo=c&logoColor=00599C" alt="C">
-</p>
-
----
-
-## Featured Projects
-
-### 1. Aegis-Pi Risk Twin — Multi-Factory Safety Observability Platform
-
-Personal implementation: [aegis-pi/dashboard_vpc](https://github.com/aegis-pi/dashboard_vpc) · Team repo: [msp-team03](https://github.com/Team-msp-architect-2026/msp-team03) · [Detail](https://kjw-cloud-portfolio.vercel.app/projects/aegis-pi-risk-twin)
-
-여러 공장의 센서·AI·인프라 상태를 **Safety Score**로 표준화하고 중앙 dashboard · daily report · Slack alert로 연결한 팀 프로젝트입니다.  
-**MSP 최종 프로젝트 발표 최우수팀 수상 (팀 수상, 2026.06)**
-
-- Data/Dashboard VPC Terraform, DynamoDB Streams→Redis notifier, FastAPI backend, React dashboard를 개인 구현
-- DataProcessor·GraphAggregator5m·RiskAlertDispatcher(Slack)는 팀 통합 범위로 구분하고 S3·DynamoDB·IoT 계약을 맞춤
-- deployment/control path와 user/read path를 VPC 경계로 분리하고, dashboard 조회는 DynamoDB read model로 사전 집계된 상태만 읽도록 설계
-
-### 2. LawMainRoad (법대로) — Labor-Law RAG & Document Workflow
-
-Repository: [law_main_road_main](https://github.com/2026-moel-datacontest-core/law_main_road_main) · [after_step (RAG 개선)](https://github.com/2026-moel-datacontest-core/after_step) · [시연 영상](https://youtu.be/fFEPP3KtHMs) · [Detail](https://kjw-cloud-portfolio.vercel.app/projects/law-main-road)
-
-> 프로젝트 종료 후 시연용 클라우드 리소스는 정리했습니다. 동작 흐름은 위 시연 영상에서 확인할 수 있습니다.
-
-외국인 근로자 등 취약 노동자가 노동 문제를 **한국 노동법 근거와 함께** 정리하도록 돕는 AI 지원 MVP 팀 프로젝트입니다.
-
-- PostgreSQL + pgvector(HNSW) → Vertex AI Gemini grounded answer로 이어지는 법령 RAG 흐름
-- citation·context 없는 생성 답변을 제한하는 grounding 경계와 privacy boundary 설계
-- 법령 근거 답변 → 지원 문서 초안까지 이어지는 document workflow (기술 구성은 팀 공개 저장소·Wiki 기준)
-
-### 3. Kubernetes-based Stock Backtesting Platform
-
-Repository: [stock-backtest-platform](https://github.com/JJong-03/stock-backtest-platform) · [Detail](https://kjw-cloud-portfolio.vercel.app/projects/stock-backtest-platform)
-
-기존에 구현한 백테스트 엔진을 수정 없이 Kubernetes Job으로 외부화해  
-**실행 격리, 재현성, 운영 관측성**을 확보한 개인 프로젝트입니다. **MSP 과정 개인 프로젝트 우수상 수상**
-
-- 백테스트 엔진을 Kubernetes Job 단위로 분리해 실행 구조 설계
-- Web → Job orchestration 구조 구현
-- GitHub Actions, Argo CD, Prometheus, Grafana 기반 배포/관측 체계 구성
-
-### 4. AWS Multi-VPC 3-Tier Infrastructure with Terraform
-
-Repository: [aws-terraform-multi-vpc](https://github.com/JJong-03/aws-terraform-multi-vpc) · [Detail](https://kjw-cloud-portfolio.vercel.app/projects/aws-terraform-multi-vpc)
-
-Terraform으로 설계·구축한 **multi-VPC 기반 3-tier AWS 인프라 프로젝트**입니다.
-
-- MAIN / MGMT / SERVICE 3개 VPC와 VPC Peering 구성
-- CloudFront, WAF, ALB, EKS, Aurora를 포함한 동적/정적 트래픽 경로 설계
-- 관리자 접근 경로를 OpenVPN 기반 MGMT VPC로 분리
-
-### 5. GCP GKE GitOps Pipeline
-
-Repository: [gcp-gke-gitops-pipeline](https://github.com/JJong-03/gcp-gke-gitops-pipeline) · [Detail](https://kjw-cloud-portfolio.vercel.app/projects/gcp-gke-gitops-pipeline)
-
-Terraform, GKE, GitHub Actions OIDC/WIF, Artifact Registry, Argo CD를 활용해  
-**GCP 기반 GitOps pipeline**을 구축하고 실제 배포까지 검증한 프로젝트입니다.
-
-- Terraform으로 GKE 및 관련 인프라 구성
-- GitHub Actions + Workload Identity Federation 기반 이미지 빌드/푸시 자동화
-- Argo CD sync 및 Ingress 접근 검증
-
-### 6. AWS Terraform Deep Dive
-
-Repository: [aws-terraform-deepdive](https://github.com/JJong-03/aws-terraform-deepdive) · [Detail](https://kjw-cloud-portfolio.vercel.app/projects/aws-terraform-deepdive)
-
-AWS 인프라를 단계적으로 구축한 뒤,  
-최종적으로 **Terraform modules + environment separation 구조**로 리팩토링한 프로젝트입니다.
-
-- Networking, Secrets, Messaging, Redis Cache 계층 구성
-- modules / environments 구조로 재사용 가능하게 정리
-- Terraform 설계 판단과 모듈 체이닝 경험 정리
-
----
-
-## Earlier Projects
-
-- [face-tracking-robot-arm](https://github.com/JJong-03/face-tracking-robot-arm) — 얼굴 추적 촬영 보조 로봇팔, 졸업 캡스톤 4인 팀 팀장 · **정보기술대학장 장려상** · [Detail](https://kjw-cloud-portfolio.vercel.app/projects/face-tracking-robot-arm)
-- [hearing-assist-headset-archive](https://github.com/JJong-03/hearing-assist-headset-archive) — 청각장애인 보조 헤드셋 프로토타입 · **2024 창업경진대회 수상** · [Detail](https://kjw-cloud-portfolio.vercel.app/projects/hearing-assist-headset-prototype)
-
----
-
-## GitHub Stats
-
-<div align="center">
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=JJong-03&show_icons=true&theme=transparent&hide_border=true&title_color=326CE5&icon_color=326CE5&text_color=888888&v=1" height="150" alt="GitHub Stats" />
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=JJong-03&layout=compact&theme=transparent&hide_border=true&title_color=326CE5&text_color=888888&v=1" height="150" alt="Top Languages" />
-</div>
-
----
-
-## Contact
-
-<p>
-  <a href="mailto:jowon7602@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white"/>
-  </a>
-  <a href="https://kjw-cloud-portfolio.vercel.app">
-    <img src="https://img.shields.io/badge/Portfolio-326CE5?style=flat&logo=vercel&logoColor=white"/>
-  </a>
-</p>
+- [얼굴 추적 로봇팔](https://github.com/JJong-03/face-tracking-robot-arm): 졸업작품 4인 팀 팀장, 정보기술대학장 장려상(팀)
+- [청각 보조 헤드셋](https://github.com/JJong-03/hearing-assist-headset-archive): 창업경진대회 5인 팀, 학장상(팀)
+- 인천대학교 임베디드시스템공학과 졸업(2026.08), 메가존클라우드 MSP 솔루션 아키텍트 양성과정 8기 수료
