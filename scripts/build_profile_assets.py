@@ -315,10 +315,10 @@ def project_desktop(palette, project) -> str:
 
 def tools_desktop(palette) -> str:
     row = 34.0
-    top = 48.0
+    top = 76.0
     panel_h = len(TOOLS) * row + 12
     cv = Canvas(DW, top + panel_h + 1, palette)
-    section_title(cv, 2, 10, "TOOLCHAIN", "프로젝트에서 직접 쓴 기술")
+    section_title(cv, 2, 38, "TOOLCHAIN", "프로젝트에서 직접 쓴 기술")
     cv.rect(0.5, top, DW - 1, panel_h, "card", rx=12, stroke="card_line")
     for i, (label, value) in enumerate(TOOLS):
         ty = top + 6 + i * row
@@ -398,7 +398,7 @@ def project_mobile(palette, project) -> str:
 
 
 def tools_mobile(palette) -> str:
-    top = 46.0
+    top = 72.0
     rows = []
     ty = top + 6
     for label, value in TOOLS:
@@ -408,7 +408,7 @@ def tools_mobile(palette) -> str:
         ty += h
     panel_h = ty + 6 - top
     cv = Canvas(MW, top + panel_h + 1, palette)
-    section_title(cv, 2, 10, "TOOLCHAIN", "직접 쓴 기술", size=19)
+    section_title(cv, 2, 36, "TOOLCHAIN", "직접 쓴 기술", size=19)
     cv.rect(0.5, top, MW - 1, panel_h, "card", rx=12, stroke="card_line")
     for i, (ry, h, label, lines) in enumerate(rows):
         if i:
